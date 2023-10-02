@@ -160,20 +160,16 @@ Here's the complete circuit diagram of the system.
 
 1.  **Connect to WiFi** tab allows searching of nearby WiFi APs and adding them to the ESP32.
    ![SCR3](artwork/scr3.png)
-7.  **Saved WiFi Networks** tab allows connecting to the saved access points.
+2.  **Saved WiFi Networks** tab allows connecting to the saved access points.
    ![SCR4](artwork/scr4.png)
-8.  **Reset...** tab allows reseting of the device to factory settings.
+3.  **Reset...** tab allows reseting of the device to factory settings.
     ![SCR5](artwork/scr5.png)
-9.  **Settings** tab contains settings related to MQTT and sensors.
+4.  **Settings** tab contains settings related to MQTT and sensors.
     ![SCR6](artwork/scr6.png)
-10. **api-now** tab gives the live-sensor data in JSON format.
+5. **api-now** tab gives the live-sensor data in JSON format.
     ![SCR7](artwork/scr7.png)
-11. **api** tab gives the historical sensor data acquired after every 5 mintues.
-    ![SCR9](artwork/scr9.png)
-13. **LiveSensors** tab shows live values of the sensors.
+6. **LiveSensors** tab shows live values of the sensors.
     ![SCR8](artwork/scr8.png)
-12. **HOME** tab shows historical sensor data in a HTML table form acquired after every 5 minutes.
-    ![SCR10](artwork/scr10.png)
 
 ### MQTT Details
 

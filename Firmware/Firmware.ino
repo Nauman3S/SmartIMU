@@ -52,20 +52,6 @@ String saveParams(AutoConnectAux &aux, PageArgument &args) // save the settings
     timezone = args.arg("timezone"); // timezone
     timezone.trim();
 
-    minActiveValue = args.arg("minActiveValue");
-    minActiveValue.trim();
-
-    ampSensorType = args.arg("ampSensorType");
-    ampSensorType.trim();
-    ampSensorType = ampSensorType.substring(0, 2);
-
-    tempUnits = args.arg("tempUnits");
-    tempUnits.trim();
-
-    String upd = args.arg("period");
-    upd = upd.substring(0, 2);
-    sensorSelection = upd;
-
     apPass = args.arg("apPass"); // ap pass
     apPass.trim();
 
@@ -89,7 +75,7 @@ String saveParams(AutoConnectAux &aux, PageArgument &args) // save the settings
     echo.value += "Timezone: " + timezone + "<br>";
     echo.value += "Username: " + userKey + "<br>";
     echo.value += "Password: " + apiKey + "<br>";
-    echo.value += "Sensor Settings: " + String(upd) + "<br>";
+
 
     echo.value += "ESP host name: " + hostName + "<br>";
     echo.value += "AP Password: " + apPass + "<br>";
@@ -259,7 +245,7 @@ void loop()
         String mpuPayload = getMPU6050Data();
         mqttPublish("ACC/" + String(hostName), getTimestamp() + String(";") + mpuPayload); // publish data to mqtt broker
         ledState(ACTIVE_MODE);
-        Serial.println(mpuPayload)
+        Serial.println(mpuPayload);
 
             lastPub = millis();
     }
